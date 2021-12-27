@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet"  href="style.css" >
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>itProger</span>
+        </div>
+        <div id="about">
+            <a href="#" onclick="slowScroll('#main')" title = "Opportunities">Opportunities</a>
+            <a href="#" onclick="slowScroll('#overview')" title="Overview">Overview</a>
+            <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Contacts</a>
+            <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+
+    </header>
+
+    <div id="top">
+        <h1>Programming</h1>
+        <h3> as a lifestyle!</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2> How we can help you!</h2>
+            <span> Wide range of everything, that can help you.</span>
+        </div>
+        <div class="text">
+            <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ea quibusdam, ipsam, minus illo, vel aspernatur nobis dignissimos quia cupiditate autem aperiam molestiae ullam. Delectus, molestias quidem! Culpa ullam, obcaecati inventore ex cumque sequi voluptatem sit perspiciatis illum. Culpa ex magni libero saepe ratione deleniti asperiores reprehenderit, esse nam accusantium?</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2> Benefits </h2>
+        <h4> that is easier with us!</h4>
+
+        <div class="img">
+            <img src="https://datawider.com/wp-content/uploads/2019/11/How-to-Learn-Python.jpg" alt="">
+            <span> Python for beginners</span>
+        </div>
+
+        <div class="img">
+            <img src="https://www.mobilelive.ca/wp-content/uploads/2020/11/Javascript_Banner.png" alt="">
+            <span> JavaScript for beginners</span>
+        </div>
+
+        <div class="img">
+            <img src="https://images.idgesg.net/images/article/2019/05/java_binary_code_gears_programming_coding_development_by_bluebay2014_gettyimages-1040871468_2400x1600-100795798-large.jpg?auto=webp&quality=85,70" alt="">
+            <span> Java for beginners</span>
+        </div>
+
+        <div class="img">
+            <img src="https://courseholic.com/wp-content/uploads/2021/05/free-c-course-1024x536.jpg" alt="">
+            <span> C++ for beginners</span>
+        </div>
+    </div>
+    <div id="contacts">
+        <center><h5> Feedback </h5></center>
+        <form id="form_input">
+            <label for="name"> Name <span> * </span></label> <br>
+            <input type="text" placeholder="Enter your name" name="name" id="name"> <br>
+            <label for="email"> Email <span> * </span></label><br>
+            <input type="email" placeholder="Enter your email" name="email" id="email"> <br>
+            <label for="message"> Message <span> * </span></label> <br>
+            <textarea placeholder="Enter your message" name="message" id="message"></textarea> <br>
+            <div id="mess_send" class="btn">Send</div>
+
+        </form>
+    </div>
+
+    <div id="faq">
+        <div>
+            <span class="title">Payment</span> <br>
+            <span class="heading">How to pay</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cum quasi adipisci! Labore molestias eligendi veritatis, magnam debitis laboriosam exercitationem unde cupiditate voluptates, rerum est ratione iure saepe perspiciatis error!</p>
+        </div>
+        <div>
+            <span class="title">Information</span> <br>
+            <span class="heading">Services</span>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias minima cupiditate sed quae laboriosam eum quasi sequi suscipit, similique accusamus.</p>
+        </div>
+        <div>
+            <span class="title">Guarantee</span> <br>
+            <span class="heading">How fast can I get a job?</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia deserunt ad saepe sunt facere, assumenda natus quos, labore a, sapiente ut quam laboriosam velit ullam. Sed aspernatur deserunt culpa quisquam.</p> 
+        </div>
+    </div>
+
+    
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+
+            }, 500);
+        }
+
+
+      $(document).on("scroll", function () {
+          if ($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+          else
+            $("header").attr("class", "fixed");
+      });
+
+    </script>
+</body>
+</html>
